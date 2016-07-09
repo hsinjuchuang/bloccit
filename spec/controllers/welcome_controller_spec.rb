@@ -17,4 +17,10 @@ RSpec.describe WelcomeController, type: :controller do
     end
   end
 
+  describe "FAQ action" do
+    it "renders the FAQ file" do
+      get :faq
+      expect(response).to render_template("faq")
+    end
+  end
 end
